@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var store = "http://labeling.i3mainz.hs-mainz.de/sparqlproxy/SPARQL";
+	var store = "http://143.93.114.137/sparqlproxy/SPARQL";
 	var query = 'SELECT * WHERE { ?s ?p ?o.  }';
 	query = encodeURIComponent(query);
 	$.ajax({
@@ -58,6 +58,26 @@ $(document).ready(function() {
 		success: function(response) {
 			console.log(response);
 			console.log(response.getElementsByTagName("name")[0].innerHTML);
+		}
+	});
+});
+
+$(document).ready(function() {
+	var store = "http://143.93.114.137/sparqlproxy/GND";
+	var uri = 'http://d-nb.info/gnd/1063654211';
+	$.ajax({
+		async: false,
+		dataType: 'json',
+		data: {
+			uri: uri
+		},
+		url: store,
+		error: function(jqXHR, textStatus, errorThrown) {
+			alert(errorThrown);
+		},
+		success: function(response) {
+			var object = response[uri];
+			console.log(object["http://d-nb.info/standards/elementset/gnd#preferredNameForTheCorporateBody"][0].value);
 		}
 	});
 });
