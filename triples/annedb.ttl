@@ -1,0 +1,739 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix idarit: <http://github.com/i3mainz/idarit-2016#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+idarit:P3 a foaf:Person.
+idarit:P3 foaf:name "Jankuhn".
+idarit:P3 vcard:hasRole "Professor".
+idarit:P3 rdfs:seeAlso <http://dbpedia.org/resource/Herbert_Jankuhn>.
+idarit:P3 owl:sameAs <http://d-nb.info/gnd/119484331>.
+idarit:P3 idarit:memberOf idarit:I19.
+idarit:P3 idarit:worksAt idarit:G7.
+idarit:P4 a foaf:Person.
+idarit:P4 foaf:name "Schindler".
+idarit:P4 vcard:hasRole "Abteilungsleitung".
+idarit:P4 owl:sameAs <http://d-nb.info/gnd/137879210>.
+idarit:P4 idarit:memberOf idarit:I14.
+idarit:P4 idarit:worksAt idarit:G4.
+idarit:P5 a foaf:Person.
+idarit:P5 foaf:name "Grohne".
+idarit:P5 vcard:hasRole "Abteilungsleitung".
+idarit:P5 owl:sameAs <http://d-nb.info/gnd/118843060>.
+idarit:P5 idarit:memberOf idarit:I12.
+idarit:P5 idarit:worksAt idarit:G5.
+idarit:P6 a foaf:Person.
+idarit:P6 foaf:name "Kamphausen".
+idarit:P6 vcard:hasRole "Leitung".
+idarit:P6 owl:sameAs <http://d-nb.info/gnd/118720651>.
+idarit:P6 idarit:memberOf idarit:I26.
+idarit:P6 idarit:worksAt idarit:G9.
+idarit:P7 a foaf:Person.
+idarit:P7 foaf:name "Hävernick".
+idarit:P7 vcard:hasRole "Leitung".
+idarit:P7 owl:sameAs <http://d-nb.info/gnd/118700359>.
+idarit:P7 idarit:memberOf idarit:I14.
+idarit:P8 a foaf:Person.
+idarit:P8 foaf:name "Fendrich".
+idarit:P8 vcard:hasRole "Baudirektor".
+idarit:P8 idarit:memberOf idarit:I1.
+idarit:P9 a foaf:Person.
+idarit:P9 foaf:name "Unverzagt".
+idarit:P9 vcard:hasRole "Leitung".
+idarit:P9 owl:sameAs <http://d-nb.info/gnd/11731093X>.
+idarit:P9 idarit:memberOf idarit:I13.
+idarit:P10 a foaf:Person.
+idarit:P10 foaf:name "LaBaume".
+idarit:P10 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P10 owl:sameAs <http://d-nb.info/gnd/116635592>.
+idarit:P10 idarit:memberOf idarit:I16.
+idarit:P11 a foaf:Person.
+idarit:P11 foaf:name "Kutsch".
+idarit:P11 vcard:hasRole "nicht näher bekannt".
+idarit:P11 idarit:memberOf idarit:I3.
+idarit:P12 a foaf:Person.
+idarit:P12 foaf:name "Meier".
+idarit:P12 vcard:hasRole "Sekretariat".
+idarit:P12 idarit:memberOf idarit:I4.
+idarit:P13 a foaf:Person.
+idarit:P13 foaf:name "Krämer".
+idarit:P13 vcard:hasRole "Leitung".
+idarit:P13 owl:sameAs <http://d-nb.info/gnd/117756229>.
+idarit:P13 idarit:memberOf idarit:I5.
+idarit:P14 a foaf:Person.
+idarit:P14 foaf:name "Neuffer".
+idarit:P14 vcard:hasRole "nicht näher bekannt".
+idarit:P14 owl:sameAs <http://d-nb.info/gnd/108171280>.
+idarit:P14 idarit:memberOf idarit:I6.
+idarit:P15 a foaf:Person.
+idarit:P15 foaf:name "Dieck".
+idarit:P15 vcard:hasRole "Leitung".
+idarit:P15 rdfs:seeAlso <http://dbpedia.org/resource/Alfred_Dieck>.
+idarit:P15 owl:sameAs <http://d-nb.info/gnd/1034711539>.
+idarit:P15 idarit:memberOf idarit:I7.
+idarit:P16 a foaf:Person.
+idarit:P16 foaf:name "Backens".
+idarit:P16 vcard:hasRole "Geschäftsführer".
+idarit:P16 idarit:memberOf idarit:I8.
+idarit:P17 a foaf:Person.
+idarit:P17 foaf:name "Merwig".
+idarit:P17 vcard:hasRole "Journalist/in".
+idarit:P17 idarit:memberOf idarit:I9.
+idarit:P18 a foaf:Person.
+idarit:P18 foaf:name "Plath".
+idarit:P18 vcard:hasRole "Leitung".
+idarit:P18 owl:sameAs <http://d-nb.info/gnd/105329320>.
+idarit:P18 idarit:memberOf idarit:I10.
+idarit:P19 a foaf:Person.
+idarit:P19 foaf:name "Stocks".
+idarit:P19 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P19 idarit:memberOf idarit:I11.
+idarit:P20 a foaf:Person.
+idarit:P20 foaf:name "Prüser".
+idarit:P20 vcard:hasRole "Direktion".
+idarit:P20 owl:sameAs <http://d-nb.info/gnd/116305800>.
+idarit:P20 idarit:memberOf idarit:I12.
+idarit:P21 a foaf:Person.
+idarit:P21 foaf:name "Averdieck".
+idarit:P21 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P21 owl:sameAs <http://d-nb.info/gnd/104650230>.
+idarit:P21 idarit:memberOf idarit:I15.
+idarit:P21 idarit:worksAt idarit:G6.
+idarit:P22 a foaf:Person.
+idarit:P22 foaf:name "Ammanicht näher bekannt".
+idarit:P22 vcard:hasRole "Professor".
+idarit:P22 owl:sameAs <http://d-nb.info/gnd/118648810>.
+idarit:P22 idarit:memberOf idarit:I17.
+idarit:P23 a foaf:Person.
+idarit:P23 foaf:name "Feger".
+idarit:P23 vcard:hasRole "Leitung".
+idarit:P23 owl:sameAs <http://d-nb.info/gnd/131383051>.
+idarit:P23 idarit:memberOf idarit:I18.
+idarit:P24 a foaf:Person.
+idarit:P24 foaf:name "Hingst".
+idarit:P24 vcard:hasRole "Abteilungsleitung".
+idarit:P24 owl:sameAs <http://d-nb.info/gnd/105816264>.
+idarit:P24 idarit:memberOf idarit:I19.
+idarit:P25 a foaf:Person.
+idarit:P25 foaf:name "Gräbke".
+idarit:P25 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P25 owl:sameAs <http://d-nb.info/gnd/138088446>.
+idarit:P25 idarit:memberOf idarit:I20.
+idarit:P26 a foaf:Person.
+idarit:P26 foaf:name "von Lehe".
+idarit:P26 vcard:hasRole "Leitung".
+idarit:P26 owl:sameAs <http://d-nb.info/gnd/11686155X>.
+idarit:P26 idarit:memberOf idarit:I21.
+idarit:P27 a foaf:Person.
+idarit:P27 foaf:name "Bolland".
+idarit:P27 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P27 owl:sameAs <http://d-nb.info/gnd/1023575582>.
+idarit:P27 idarit:memberOf idarit:I21.
+idarit:P28 a foaf:Person.
+idarit:P28 foaf:name "Rust".
+idarit:P28 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P28 owl:sameAs <http://d-nb.info/gnd/118604317>.
+idarit:P28 idarit:memberOf idarit:I19.
+idarit:P29 a foaf:Person.
+idarit:P29 foaf:name "Plass".
+idarit:P29 vcard:hasRole "Wissenschaftlicher Mitarbeiter".
+idarit:P29 idarit:memberOf idarit:I22.
+idarit:P31 a foaf:Person.
+idarit:P31 foaf:name "Wegewitz".
+idarit:P31 vcard:hasRole "Leitung".
+idarit:P31 owl:sameAs <http://d-nb.info/gnd/140538356>.
+idarit:P31 idarit:memberOf idarit:I23.
+idarit:P32 a foaf:Person.
+idarit:P32 foaf:name "Reincke".
+idarit:P32 vcard:hasRole "Professor emeritus".
+idarit:P32 owl:sameAs <http://d-nb.info/gnd/12027129X>.
+idarit:P32 idarit:memberOf idarit:I24.
+idarit:P33 a foaf:Person.
+idarit:P33 foaf:name "Busse".
+idarit:P33 vcard:hasRole "Arbeiter".
+idarit:P33 idarit:memberOf idarit:I14.
+idarit:P33 idarit:worksAt idarit:G4.
+idarit:P34 a foaf:Person.
+idarit:P34 foaf:name "Marquardt".
+idarit:P34 vcard:hasRole "Arbeiter".
+idarit:P34 idarit:memberOf idarit:I14.
+idarit:P34 idarit:worksAt idarit:G4.
+idarit:P35 a foaf:Person.
+idarit:P35 foaf:name "Krawczyk".
+idarit:P35 vcard:hasRole "Zeichnerin".
+idarit:P35 idarit:memberOf idarit:I14.
+idarit:P35 idarit:worksAt idarit:G5.
+idarit:P36 a foaf:Person.
+idarit:P36 foaf:name "Jeschke".
+idarit:P36 vcard:hasRole "Zeichnerin".
+idarit:P36 idarit:memberOf idarit:I14.
+idarit:P36 idarit:worksAt idarit:G6.
+idarit:P37 a foaf:Person.
+idarit:P37 foaf:name "Unbehauen".
+idarit:P37 vcard:hasRole "Arbeiter".
+idarit:P37 idarit:memberOf idarit:I14.
+idarit:P37 idarit:worksAt idarit:G6.
+idarit:P38 a foaf:Person.
+idarit:P38 foaf:name "Kalisch".
+idarit:P38 vcard:hasRole "Arbeiter".
+idarit:P38 idarit:memberOf idarit:I6.
+idarit:P38 idarit:worksAt idarit:G8.
+idarit:I1 a vcard:Organization.
+idarit:I1 a geo:SpatialThing.
+idarit:I1 vcard:hasOrganizationName "keinen Namen".
+idarit:I1 geo:lat "0.0".
+idarit:I1 geo:lon "0.0".
+idarit:I2 a vcard:Organization.
+idarit:I2 a geo:SpatialThing.
+idarit:I2 vcard:hasOrganizationName "Hochschule Mainz".
+idarit:I2 geo:lat "49.996667".
+idarit:I2 geo:lon "8.278889".
+idarit:I2 rdfs:seeAlso <http://dbpedia.org/resource/University_of_Applied_Sciences,_Mainz>.
+idarit:I2 dcterms:spatial <http://geonames.org/6554818>.
+idarit:I3 a vcard:Organization.
+idarit:I3 a geo:SpatialThing.
+idarit:I3 vcard:hasOrganizationName "West- und Süddeutscher Verband für Altertumsforschung".
+idarit:I3 geo:lat "49.48888".
+idarit:I3 geo:lon "8.46212".
+idarit:I3 dcterms:spatial <http://geonames.org/6559162>.
+idarit:I4 a vcard:Organization.
+idarit:I4 a geo:SpatialThing.
+idarit:I4 vcard:hasOrganizationName "Museumsverein für das Fürstentum Lüneburg".
+idarit:I4 geo:lat "53.246462".
+idarit:I4 geo:lon "10.415917".
+idarit:I4 dcterms:spatial <http://geonames.org/6557441>.
+idarit:I5 a vcard:Organization.
+idarit:I5 a geo:SpatialThing.
+idarit:I5 vcard:hasOrganizationName "Römisch-Germanische Kommission".
+idarit:I5 geo:lat "50.110556".
+idarit:I5 geo:lon "8.682222".
+idarit:I5 rdfs:seeAlso <http://dbpedia.org/resource/German_Archaeological_Institute>.
+idarit:I5 dcterms:spatial <http://geonames.org/3220968>.
+idarit:I6 a vcard:Organization.
+idarit:I6 a geo:SpatialThing.
+idarit:I6 vcard:hasOrganizationName "Verband der westdeutschen Landesarchäologen, Bonn".
+idarit:I6 geo:lat "50.733992".
+idarit:I6 geo:lon "7.099814".
+idarit:I6 dcterms:spatial <http://geonames.org/6553048>.
+idarit:I7 a vcard:Organization.
+idarit:I7 a geo:SpatialThing.
+idarit:I7 vcard:hasOrganizationName "Internationales Moormuseum, Bad Neydharting, Oberösterreich".
+idarit:I7 geo:lat "48.063889".
+idarit:I7 geo:lon "13.901944".
+idarit:I7 dcterms:spatial <http://geonames.org/7873273>.
+idarit:I8 a vcard:Organization.
+idarit:I8 a geo:SpatialThing.
+idarit:I8 vcard:hasOrganizationName "Lichtwark-Ausschuss, Bergedorf".
+idarit:I8 geo:lat "53.483333".
+idarit:I8 geo:lon "10.216667".
+idarit:I8 dcterms:spatial <http://geonames.org/2950653>.
+idarit:I9 a vcard:Organization.
+idarit:I9 a geo:SpatialThing.
+idarit:I9 vcard:hasOrganizationName "Hamburger Freie Presse, Hamburg".
+idarit:I9 geo:lat "53.550556".
+idarit:I9 geo:lon "9.993333".
+idarit:I9 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I10 a vcard:Organization.
+idarit:I10 a geo:SpatialThing.
+idarit:I10 vcard:hasOrganizationName "Heimatmuseum Hannover".
+idarit:I10 geo:lat "52.371944".
+idarit:I10 geo:lon "9.731389".
+idarit:I10 rdfs:seeAlso <http://dbpedia.org/resource/Lower_Saxony_State_Museum>.
+idarit:I10 dcterms:spatial <http://geonames.org/3221033>.
+idarit:I11 a vcard:Organization.
+idarit:I11 a geo:SpatialThing.
+idarit:I11 vcard:hasOrganizationName "Deutsche Gesellschaft für Kartographie, Hannover".
+idarit:I11 geo:lat "52.374444".
+idarit:I11 geo:lon "9.738611".
+idarit:I11 dcterms:spatial <http://geonames.org/3221033>.
+idarit:I12 a vcard:Organization.
+idarit:I12 a geo:SpatialThing.
+idarit:I12 vcard:hasOrganizationName "Staatsarchiv Bremen".
+idarit:I12 geo:lat "53.077028".
+idarit:I12 geo:lon "8.816111".
+idarit:I12 dcterms:spatial <http://geonames.org/2944387>.
+idarit:I13 a vcard:Organization.
+idarit:I13 a geo:SpatialThing.
+idarit:I13 vcard:hasOrganizationName "Deutsche Akademie der Wissenschaften zu Berlin -Sekt. Vor- u. Frühgesch.".
+idarit:I13 geo:lat "52.5139".
+idarit:I13 geo:lon "13.3942".
+idarit:I13 rdfs:seeAlso <http://dbpedia.org/resource/German_Academy_of_Sciences_at_Berlin>.
+idarit:I13 dcterms:spatial <http://geonames.org/2950159>.
+idarit:I14 a vcard:Organization.
+idarit:I14 a geo:SpatialThing.
+idarit:I14 vcard:hasOrganizationName "Museum für Hamburgische Geschichte".
+idarit:I14 geo:lat "53.551111".
+idarit:I14 geo:lon "9.973056".
+idarit:I14 rdfs:seeAlso <http://dbpedia.org/resource/Hamburg_Museum>.
+idarit:I14 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I15 a vcard:Organization.
+idarit:I15 a geo:SpatialThing.
+idarit:I15 vcard:hasOrganizationName "Botanisches Institut Düsternbrookerweg 17".
+idarit:I15 geo:lat "53.566944".
+idarit:I15 geo:lon "9.983889".
+idarit:I15 rdfs:seeAlso <http://dbpedia.org/resource/University_of_Hamburg>.
+idarit:I15 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I16 a vcard:Organization.
+idarit:I16 a geo:SpatialThing.
+idarit:I16 vcard:hasOrganizationName "Herder-Institut Marburg".
+idarit:I16 geo:lat "50.808855".
+idarit:I16 geo:lon "8.760706".
+idarit:I16 rdfs:seeAlso <http://dbpedia.org/resource/Leibniz_Association>.
+idarit:I16 dcterms:spatial <http://geonames.org/2873759>.
+idarit:I17 a vcard:Organization.
+idarit:I17 a geo:SpatialThing.
+idarit:I17 vcard:hasOrganizationName "Inst. für Wirtschaftsgeschichte Mannheim".
+idarit:I17 geo:lat "49.483196".
+idarit:I17 geo:lon "8.464687".
+idarit:I17 rdfs:seeAlso <http://dbpedia.org/resource/University_of_Mannheim>.
+idarit:I17 dcterms:spatial <http://geonames.org/6559162>.
+idarit:I18 a vcard:Organization.
+idarit:I18 a geo:SpatialThing.
+idarit:I18 vcard:hasOrganizationName "Stadtarchiv Stadt Konstanz".
+idarit:I18 geo:lat "47.663333".
+idarit:I18 geo:lon "9.175278".
+idarit:I18 dcterms:spatial <http://geonames.org/6559164>.
+idarit:I19 a vcard:Organization.
+idarit:I19 a geo:SpatialThing.
+idarit:I19 vcard:hasOrganizationName "Landesamt für Vor- und Frühgeschichte von Schleswig-Holstein".
+idarit:I19 geo:lat "54.505556".
+idarit:I19 geo:lon "9.527778".
+idarit:I19 rdfs:seeAlso <http://dbpedia.org/resource/Hedeby_Viking_Museum>.
+idarit:I19 dcterms:spatial <http://geonames.org/2838632>.
+idarit:I20 a vcard:Organization.
+idarit:I20 a geo:SpatialThing.
+idarit:I20 vcard:hasOrganizationName "St. Annen-Museum".
+idarit:I20 geo:lat "53.862676".
+idarit:I20 geo:lon "10.689145".
+idarit:I20 rdfs:seeAlso <http://dbpedia.org/resource/St._Anne's_Museum_Quarter,_Lübeck>.
+idarit:I20 dcterms:spatial <http://geonames.org/3249071>.
+idarit:I21 a vcard:Organization.
+idarit:I21 a geo:SpatialThing.
+idarit:I21 vcard:hasOrganizationName "Staatsarchiv Hamburg".
+idarit:I21 geo:lat "53.575".
+idarit:I21 geo:lon "10.068889".
+idarit:I21 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I22 a vcard:Organization.
+idarit:I22 a geo:SpatialThing.
+idarit:I22 vcard:hasOrganizationName "Museum Altona".
+idarit:I22 geo:lat "53.548889".
+idarit:I22 geo:lon "9.934444".
+idarit:I22 rdfs:seeAlso <http://dbpedia.org/resource/Archäologisches_Museum_Hamburg>.
+idarit:I22 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I23 a vcard:Organization.
+idarit:I23 a geo:SpatialThing.
+idarit:I23 vcard:hasOrganizationName "Helms-Museum Harburg".
+idarit:I23 geo:lat "53.458575".
+idarit:I23 geo:lon "9.979228".
+idarit:I23 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I24 a vcard:Organization.
+idarit:I24 a geo:SpatialThing.
+idarit:I24 vcard:hasOrganizationName "Institut für Vor- und Frühgeschichte, Univ. Hamburg".
+idarit:I24 geo:lat "53.566944".
+idarit:I24 geo:lon "9.983889".
+idarit:I24 rdfs:seeAlso <http://dbpedia.org/resource/University_of_Hamburg>.
+idarit:I24 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I25 a vcard:Organization.
+idarit:I25 a geo:SpatialThing.
+idarit:I25 vcard:hasOrganizationName "Polizeischule Hamburg".
+idarit:I25 geo:lat "53.602182".
+idarit:I25 geo:lon "9.976279".
+idarit:I25 dcterms:spatial <http://geonames.org/2911297>.
+idarit:I26 a vcard:Organization.
+idarit:I26 a geo:SpatialThing.
+idarit:I26 vcard:hasOrganizationName "Dithmarscher Landesmuseum".
+idarit:I26 geo:lat "54.091606".
+idarit:I26 geo:lon "9.073409".
+idarit:I26 dcterms:spatial <http://geonames.org/2911297>.
+idarit:V1 a idarit:Vortrag.
+idarit:V1 dcterms:date "2015-12-24T00:00:00Z"^^xsd:dateTime.
+idarit:V1 dcterms:subject "Das Leben des Brian".
+idarit:V1 dcterms:spatial <http://geonames.org/293198>.
+idarit:V1 idarit:isAbout idarit:G1.
+idarit:V1 idarit:presentedBy idarit:P2.
+idarit:V2 a idarit:Vortrag.
+idarit:V2 dcterms:date "2016-11-09T00:00:00Z"^^xsd:dateTime.
+idarit:V2 dcterms:subject "mainzed".
+idarit:V2 dcterms:spatial <http://geonames.org/6554818>.
+idarit:V2 idarit:presentedAt idarit:I1.
+idarit:V2 idarit:presentedBy idarit:P1.
+idarit:V3 a idarit:Vortrag.
+idarit:V3 dcterms:date "1951-01-03T00:00:00Z"^^xsd:dateTime.
+idarit:V3 dcterms:subject "Urgeschichtliche Denkmalpfleg in der Großstadt".
+idarit:V3 idarit:isAbout idarit:G4.
+idarit:V3 idarit:presentedAt idarit:I10.
+idarit:V3 idarit:presentedBy idarit:P4.
+idarit:V4 a idarit:Vortrag.
+idarit:V4 dcterms:date "1951-05-26T00:00:00Z"^^xsd:dateTime.
+idarit:V4 dcterms:subject "Geschichte der Stadt Hamburg".
+idarit:V4 idarit:isAbout idarit:G4.
+idarit:V4 idarit:presentedAt idarit:I25.
+idarit:V4 idarit:presentedBy idarit:P4.
+idarit:V5 a idarit:Vortrag.
+idarit:V5 dcterms:date "1958-11-14T00:00:00Z"^^xsd:dateTime.
+idarit:V5 dcterms:subject "Althamburg".
+idarit:V5 dcterms:spatial <http://geonames.org/2834281>.
+idarit:V5 idarit:isAbout idarit:G4.
+idarit:V5 idarit:presentedAt idarit:I3.
+idarit:V5 idarit:presentedBy idarit:P4.
+idarit:V6 a idarit:Vortrag.
+idarit:V6 dcterms:date "1959-01-14T00:00:00Z"^^xsd:dateTime.
+idarit:V6 dcterms:subject "Die Ausgrabungen in der Hammaburg und das Problem Esesfeld".
+idarit:V6 dcterms:spatial <http://geonames.org/6557362>.
+idarit:V6 idarit:isAbout idarit:G4.
+idarit:V6 idarit:presentedAt idarit:I20.
+idarit:V6 idarit:presentedBy idarit:P4.
+idarit:V7 a idarit:Vortrag.
+idarit:V7 dcterms:date "1956-09-10T00:00:00Z"^^xsd:dateTime.
+idarit:V7 dcterms:subject "Ergebnisse Grabungen in der Hammaburg".
+idarit:V7 dcterms:spatial <http://geonames.org/2950265>.
+idarit:V7 idarit:isAbout idarit:G4.
+idarit:V7 idarit:presentedAt idarit:I9.
+idarit:V7 idarit:presentedBy idarit:P4.
+idarit:V8 a idarit:Vortrag.
+idarit:V8 dcterms:date "1954-09-29T00:00:00Z"^^xsd:dateTime.
+idarit:V8 dcterms:subject "Ein suebischer Dorfplatz in Farmsen".
+idarit:V8 dcterms:spatial <http://geonames.org/2911297>.
+idarit:V8 idarit:isAbout idarit:G5.
+idarit:V8 idarit:presentedAt idarit:I12.
+idarit:V8 idarit:presentedBy idarit:P4.
+idarit:V9 a idarit:Vortrag.
+idarit:V9 dcterms:date "1954-08-23T00:00:00Z"^^xsd:dateTime.
+idarit:V9 dcterms:subject "Bernstein als Schmuck- und Handelsgut in der Vorgeschichte".
+idarit:V9 idarit:isAbout idarit:G11.
+idarit:V9 idarit:presentedAt idarit:I6.
+idarit:V9 idarit:presentedBy idarit:P28.
+idarit:V10 a idarit:Vortrag.
+idarit:V10 dcterms:date "1949-10-12T00:00:00Z"^^xsd:dateTime.
+idarit:V10 dcterms:subject "Farmsen und kein Ende".
+idarit:V10 idarit:isAbout idarit:G12.
+idarit:V10 idarit:presentedAt idarit:I14.
+idarit:V10 idarit:presentedBy idarit:P3.
+idarit:V11 a idarit:Vortrag.
+idarit:V11 dcterms:date "1952-05-21T00:00:00Z"^^xsd:dateTime.
+idarit:V11 dcterms:subject "Die Ausgrabungen der letzten zwei Jahre".
+idarit:V11 idarit:isAbout idarit:G12.
+idarit:V11 idarit:presentedAt idarit:I16.
+idarit:V11 idarit:presentedBy idarit:P21.
+idarit:V12 a idarit:Vortrag.
+idarit:V12 dcterms:date "1954-07-16T00:00:00Z"^^xsd:dateTime.
+idarit:V12 dcterms:subject "Neues über Altes - Ausgrabungen bei uns".
+idarit:V12 idarit:isAbout idarit:G10.
+idarit:V12 idarit:presentedAt idarit:I17.
+idarit:V12 idarit:presentedBy idarit:P32.
+idarit:V13 a idarit:Vortrag.
+idarit:V13 dcterms:date "1953-02-13T00:00:00Z"^^xsd:dateTime.
+idarit:V13 dcterms:subject "Das Neolithikum und Boberg".
+idarit:V13 idarit:isAbout idarit:G6.
+idarit:V13 idarit:presentedAt idarit:I22.
+idarit:V13 idarit:presentedBy idarit:P7.
+idarit:V14 a idarit:Vortrag.
+idarit:V14 dcterms:date "1956-11-13T00:00:00Z"^^xsd:dateTime.
+idarit:V14 dcterms:subject "Boberg und das neolithikum".
+idarit:V14 idarit:isAbout idarit:G7.
+idarit:V14 idarit:presentedAt idarit:I10.
+idarit:V14 idarit:presentedBy idarit:P31.
+idarit:V15 a idarit:Vortrag.
+idarit:V15 dcterms:date "1956-11-13T00:00:00Z"^^xsd:dateTime.
+idarit:V15 dcterms:subject "Archäologische Sensation".
+idarit:V15 idarit:isAbout idarit:G8.
+idarit:V15 idarit:presentedAt idarit:I7.
+idarit:V15 idarit:presentedBy idarit:P10.
+idarit:V16 a idarit:Vortrag.
+idarit:V16 dcterms:date "1953-01-09T00:00:00Z"^^xsd:dateTime.
+idarit:V16 dcterms:subject "Das Mittelalter im Spiegel der Funde".
+idarit:V16 idarit:isAbout idarit:G9.
+idarit:V16 idarit:presentedAt idarit:I15.
+idarit:V16 idarit:presentedBy idarit:P27.
+idarit:V17 a idarit:Vortrag.
+idarit:V17 dcterms:date "1956-04-04T00:00:00Z"^^xsd:dateTime.
+idarit:V17 dcterms:subject "Vier neue Neunaugenperlen".
+idarit:V17 idarit:isAbout idarit:G3.
+idarit:V17 idarit:presentedAt idarit:I5.
+idarit:V17 idarit:presentedBy idarit:P6.
+idarit:V18 a idarit:Vortrag.
+idarit:V18 dcterms:date "1957-03-28T00:00:00Z"^^xsd:dateTime.
+idarit:V18 dcterms:subject "Keramik, Knochen und eine Perle".
+idarit:V18 idarit:isAbout idarit:G3.
+idarit:V18 idarit:presentedAt idarit:I6.
+idarit:V18 idarit:presentedBy idarit:P28.
+idarit:V19 a idarit:Vortrag.
+idarit:V19 dcterms:date "1951-11-21T00:00:00Z"^^xsd:dateTime.
+idarit:V19 dcterms:subject "Hafenstädte des Mittelalters".
+idarit:V19 idarit:isAbout idarit:G2.
+idarit:V19 idarit:presentedAt idarit:I7.
+idarit:V19 idarit:presentedBy idarit:P3.
+idarit:V20 a idarit:Vortrag.
+idarit:V20 dcterms:date "1955-02-04T00:00:00Z"^^xsd:dateTime.
+idarit:V20 dcterms:subject "Waren wir alle Wikinger".
+idarit:V20 idarit:isAbout idarit:G11.
+idarit:V20 idarit:presentedAt idarit:I4.
+idarit:V20 idarit:presentedBy idarit:P25.
+idarit:V21 a idarit:Vortrag.
+idarit:V21 dcterms:date "1955-09-08T00:00:00Z"^^xsd:dateTime.
+idarit:V21 dcterms:subject "Archäologie - eine Einführung".
+idarit:V21 idarit:isAbout idarit:G10.
+idarit:V21 idarit:presentedAt idarit:I21.
+idarit:V21 idarit:presentedBy idarit:P7.
+idarit:B1 a idarit:Brief.
+idarit:B1 dcterms:date "2016-11-09T00:00:00Z"^^xsd:dateTime.
+idarit:B1 dcterms:subject "Thema a".
+idarit:B1 idarit:writtenBy idarit:P1.
+idarit:B1 idarit:sendTo idarit:P2.
+idarit:B2 a idarit:Brief.
+idarit:B2 dcterms:date "2015-01-01T00:00:00Z"^^xsd:dateTime.
+idarit:B2 dcterms:subject "Thema b".
+idarit:B2 idarit:writtenBy idarit:P2.
+idarit:B2 idarit:sendTo idarit:P1.
+idarit:B3 a idarit:Brief.
+idarit:B3 dcterms:date "1956-04-19T00:00:00Z"^^xsd:dateTime.
+idarit:B3 dcterms:subject "Anmeldung Verbandstagung".
+idarit:B3 idarit:writtenBy idarit:P12.
+idarit:B3 idarit:sendTo idarit:P4.
+idarit:B4 a idarit:Brief.
+idarit:B4 dcterms:date "1958-08-22T00:00:00Z"^^xsd:dateTime.
+idarit:B4 dcterms:subject "Einladung".
+idarit:B4 idarit:writtenBy idarit:P31.
+idarit:B4 idarit:sendTo idarit:P4.
+idarit:B5 a idarit:Brief.
+idarit:B5 dcterms:date "1951-03-27T00:00:00Z"^^xsd:dateTime.
+idarit:B5 dcterms:subject "Anforderung Abstract".
+idarit:B5 idarit:writtenBy idarit:P11.
+idarit:B5 idarit:sendTo idarit:P4.
+idarit:B6 a idarit:Brief.
+idarit:B6 dcterms:date "1951-03-10T00:00:00Z"^^xsd:dateTime.
+idarit:B6 dcterms:subject "Einladung".
+idarit:B6 idarit:writtenBy idarit:P11.
+idarit:B6 idarit:sendTo idarit:P4.
+idarit:B7 a idarit:Brief.
+idarit:B7 dcterms:date "1951-04-27T00:00:00Z"^^xsd:dateTime.
+idarit:B7 dcterms:subject "Annahme Manuskript".
+idarit:B7 idarit:writtenBy idarit:P11.
+idarit:B7 idarit:sendTo idarit:P4.
+idarit:B8 a idarit:Brief.
+idarit:B8 dcterms:date "1952-08-22T00:00:00Z"^^xsd:dateTime.
+idarit:B8 dcterms:subject "Nachfrage Belegxemplar".
+idarit:B8 idarit:writtenBy idarit:P4.
+idarit:B8 idarit:sendTo idarit:P16.
+idarit:B9 a idarit:Brief.
+idarit:B9 dcterms:date "1953-04-21T00:00:00Z"^^xsd:dateTime.
+idarit:B9 dcterms:subject "Interna Bodendenkmalpflege".
+idarit:B9 idarit:writtenBy idarit:P7.
+idarit:B9 idarit:sendTo idarit:P4.
+idarit:B10 a idarit:Brief.
+idarit:B10 dcterms:date "1957-01-17T00:00:00Z"^^xsd:dateTime.
+idarit:B10 dcterms:subject "Dank Einladung".
+idarit:B10 idarit:writtenBy idarit:P4.
+idarit:B10 idarit:sendTo idarit:P13.
+idarit:B11 a idarit:Brief.
+idarit:B11 dcterms:date "1957-01-30T00:00:00Z"^^xsd:dateTime.
+idarit:B11 dcterms:subject "Zusage".
+idarit:B11 idarit:writtenBy idarit:P4.
+idarit:B11 idarit:sendTo idarit:P13.
+idarit:B12 a idarit:Brief.
+idarit:B12 dcterms:date "1954-05-15T00:00:00Z"^^xsd:dateTime.
+idarit:B12 dcterms:subject "Bitte um Manuskript".
+idarit:B12 idarit:writtenBy idarit:P20.
+idarit:B12 idarit:sendTo idarit:P4.
+idarit:B13 a idarit:Brief.
+idarit:B13 dcterms:date "1955-05-10T00:00:00Z"^^xsd:dateTime.
+idarit:B13 dcterms:subject "Bericht AG keramik".
+idarit:B13 idarit:writtenBy idarit:P4.
+idarit:B13 idarit:sendTo idarit:P9.
+idarit:B14 a idarit:Brief.
+idarit:B14 dcterms:date "1952-11-07T00:00:00Z"^^xsd:dateTime.
+idarit:B14 dcterms:subject "Tagungsort Hannover".
+idarit:B14 idarit:writtenBy idarit:P4.
+idarit:B14 idarit:sendTo idarit:P18.
+idarit:B15 a idarit:Brief.
+idarit:B15 dcterms:date "1952-09-17T00:00:00Z"^^xsd:dateTime.
+idarit:B15 dcterms:subject "Absage".
+idarit:B15 idarit:writtenBy idarit:P4.
+idarit:B15 idarit:sendTo idarit:P19.
+idarit:B16 a idarit:Brief.
+idarit:B16 dcterms:date "1951-06-19T00:00:00Z"^^xsd:dateTime.
+idarit:B16 dcterms:subject "Honorarangelegenheiten".
+idarit:B16 idarit:writtenBy idarit:P4.
+idarit:B16 idarit:sendTo idarit:P21.
+idarit:B17 a idarit:Brief.
+idarit:B17 dcterms:date "1951-07-17T00:00:00Z"^^xsd:dateTime.
+idarit:B17 dcterms:subject "Honorarangelegenheiten".
+idarit:B17 idarit:writtenBy idarit:P21.
+idarit:B17 idarit:sendTo idarit:P4.
+idarit:B18 a idarit:Brief.
+idarit:B18 dcterms:date "1951-11-02T00:00:00Z"^^xsd:dateTime.
+idarit:B18 dcterms:subject "Honoraranglegenheiten".
+idarit:B18 idarit:writtenBy idarit:P4.
+idarit:B18 idarit:sendTo idarit:P21.
+idarit:B19 a idarit:Brief.
+idarit:B19 dcterms:date "1951-10-31T00:00:00Z"^^xsd:dateTime.
+idarit:B19 dcterms:subject "Kostenaufstellung".
+idarit:B19 idarit:writtenBy idarit:P21.
+idarit:B19 idarit:sendTo idarit:P4.
+idarit:B20 a idarit:Brief.
+idarit:B20 dcterms:date "1951-10-11T00:00:00Z"^^xsd:dateTime.
+idarit:B20 dcterms:subject "Honorarangelegenheiten".
+idarit:B20 idarit:writtenBy idarit:P21.
+idarit:B20 idarit:sendTo idarit:P4.
+idarit:B21 a idarit:Brief.
+idarit:B21 dcterms:date "1952-21-04T00:00:00Z"^^xsd:dateTime.
+idarit:B21 dcterms:subject "Grabung Boberg".
+idarit:B21 idarit:writtenBy idarit:P4.
+idarit:B21 idarit:sendTo idarit:P21.
+idarit:B22 a idarit:Brief.
+idarit:B22 dcterms:date "1953-02-04T00:00:00Z"^^xsd:dateTime.
+idarit:B22 dcterms:subject "Grabung Boberg".
+idarit:B22 idarit:writtenBy idarit:P4.
+idarit:B22 idarit:sendTo idarit:P12.
+idarit:B23 a idarit:Brief.
+idarit:B23 dcterms:date "1952-05-21T00:00:00Z"^^xsd:dateTime.
+idarit:B23 dcterms:subject "Anfrage Exponate".
+idarit:B23 idarit:writtenBy idarit:P4.
+idarit:B23 idarit:sendTo idarit:P15.
+idarit:B24 a idarit:Brief.
+idarit:B24 dcterms:date "1952-05-29T00:00:00Z"^^xsd:dateTime.
+idarit:B24 dcterms:subject "Ablehnung Exponate".
+idarit:B24 idarit:writtenBy idarit:P15.
+idarit:B24 idarit:sendTo idarit:P4.
+idarit:B25 a idarit:Brief.
+idarit:B25 dcterms:date "1951-04-12T00:00:00Z"^^xsd:dateTime.
+idarit:B25 dcterms:subject "Tagesordnung Tagung".
+idarit:B25 idarit:writtenBy idarit:P14.
+idarit:B25 idarit:sendTo idarit:P4.
+idarit:B26 a idarit:Brief.
+idarit:B26 dcterms:date "1952-09-10T00:00:00Z"^^xsd:dateTime.
+idarit:B26 dcterms:subject "Einladung".
+idarit:B26 idarit:writtenBy idarit:P19.
+idarit:B26 idarit:sendTo idarit:P7.
+idarit:B27 a idarit:Brief.
+idarit:B27 dcterms:date "1952-03-10T00:00:00Z"^^xsd:dateTime.
+idarit:B27 dcterms:subject "Dank für Material".
+idarit:B27 idarit:writtenBy idarit:P3.
+idarit:B27 idarit:sendTo idarit:P7.
+idarit:B28 a idarit:Brief.
+idarit:B28 dcterms:date "1959-02-09T00:00:00Z"^^xsd:dateTime.
+idarit:B28 dcterms:subject "Zusage".
+idarit:B28 idarit:writtenBy idarit:P23.
+idarit:B28 idarit:sendTo idarit:P4.
+idarit:B29 a idarit:Brief.
+idarit:B29 dcterms:date "1959-02-17T00:00:00Z"^^xsd:dateTime.
+idarit:B29 dcterms:subject "Bestätigung Anmeldung".
+idarit:B29 idarit:writtenBy idarit:P4.
+idarit:B29 idarit:sendTo idarit:P22.
+idarit:B30 a idarit:Brief.
+idarit:B30 dcterms:date "1959-02-06T00:00:00Z"^^xsd:dateTime.
+idarit:B30 dcterms:subject "Zusage Tagung".
+idarit:B30 idarit:writtenBy idarit:P22.
+idarit:B30 idarit:sendTo idarit:P4.
+idarit:B31 a idarit:Brief.
+idarit:B31 dcterms:date "1950-12-05T00:00:00Z"^^xsd:dateTime.
+idarit:B31 dcterms:subject "Antwort Anfrage Stadtarchäologie".
+idarit:B31 idarit:writtenBy idarit:P24.
+idarit:B31 idarit:sendTo idarit:P4.
+idarit:B32 a idarit:Brief.
+idarit:B32 dcterms:date "1953-01-09T00:00:00Z"^^xsd:dateTime.
+idarit:B32 dcterms:subject "Zusage Aufenthaltserlaubnis".
+idarit:B32 idarit:writtenBy idarit:P9.
+idarit:B32 idarit:sendTo idarit:P4.
+idarit:B33 a idarit:Brief.
+idarit:B33 dcterms:date "1955-04-22T00:00:00Z"^^xsd:dateTime.
+idarit:B33 dcterms:subject "Museumsinterna".
+idarit:B33 idarit:writtenBy idarit:P4.
+idarit:B33 idarit:sendTo idarit:P7.
+idarit:B34 a idarit:Brief.
+idarit:B34 dcterms:date "1959-06-03T00:00:00Z"^^xsd:dateTime.
+idarit:B34 dcterms:subject "Einladung Verein".
+idarit:B34 idarit:writtenBy idarit:P4.
+idarit:B34 idarit:sendTo idarit:P27.
+idarit:B35 a idarit:Brief.
+idarit:B35 dcterms:date "1959-04-21T00:00:00Z"^^xsd:dateTime.
+idarit:B35 dcterms:subject "Absage".
+idarit:B35 idarit:writtenBy idarit:P24.
+idarit:B35 idarit:sendTo idarit:P4.
+idarit:B36 a idarit:Brief.
+idarit:B36 dcterms:date "1958-12-19T00:00:00Z"^^xsd:dateTime.
+idarit:B36 dcterms:subject "Dank Ernennung".
+idarit:B36 idarit:writtenBy idarit:P4.
+idarit:B36 idarit:sendTo idarit:P13.
+idarit:B37 a idarit:Brief.
+idarit:B37 dcterms:date "1958-05-29T00:00:00Z"^^xsd:dateTime.
+idarit:B37 dcterms:subject "Dank Buch".
+idarit:B37 idarit:writtenBy idarit:P5.
+idarit:B37 idarit:sendTo idarit:P4.
+idarit:G1 a idarit:Grabung.
+idarit:G1 rdfs:label "Mainz".
+idarit:G1 geo:lat "50.0".
+idarit:G1 geo:lon "8.271111".
+idarit:G4 a idarit:Grabung.
+idarit:G4 rdfs:label "Domplatz Hamburg".
+idarit:G4 geo:lat "53.549866".
+idarit:G4 geo:lon "9.997729".
+idarit:G4 idarit:visitedBy idarit:P3.
+idarit:G4 idarit:visitedBy idarit:P10.
+idarit:G4 idarit:visitedBy idarit:P24.
+idarit:G5 a idarit:Grabung.
+idarit:G5 rdfs:label "Farmsen 6".
+idarit:G5 geo:lat "53.606389".
+idarit:G5 geo:lon "10.119722".
+idarit:G6 a idarit:Grabung.
+idarit:G6 rdfs:label "Boberg".
+idarit:G6 geo:lat "53.510714".
+idarit:G6 geo:lon "10.146647".
+idarit:G7 a idarit:Grabung.
+idarit:G7 rdfs:label "Haithabu".
+idarit:G7 geo:lat "54.491111".
+idarit:G7 geo:lon "9.565278".
+idarit:G7 idarit:visitedBy idarit:P6.
+idarit:G7 idarit:visitedBy idarit:P9.
+idarit:G7 idarit:visitedBy idarit:P10.
+idarit:G7 idarit:visitedBy idarit:P13.
+idarit:G7 idarit:visitedBy idarit:P26.
+idarit:G7 idarit:visitedBy idarit:P27.
+idarit:G7 idarit:visitedBy idarit:P28.
+idarit:G7 idarit:visitedBy idarit:P30.
+idarit:G8 a idarit:Grabung.
+idarit:G8 rdfs:label "Prätorium Köln".
+idarit:G8 geo:lat "50.937916".
+idarit:G8 geo:lon "6.958493".
+idarit:G8 idarit:visitedBy idarit:P4.
+idarit:G8 idarit:visitedBy idarit:P3.
+idarit:G8 idarit:visitedBy idarit:P16.
+idarit:G8 idarit:visitedBy idarit:P31.
+idarit:G9 a idarit:Grabung.
+idarit:G9 rdfs:label "Meldorfer Dom".
+idarit:G9 geo:lat "54.090556".
+idarit:G9 geo:lon "9.071667".
+idarit:G9 idarit:visitedBy idarit:P4.
+idarit:G9 idarit:visitedBy idarit:P9.
+idarit:G9 idarit:visitedBy idarit:P24.
+idarit:G9 idarit:visitedBy idarit:P25.
+idarit:G10 a idarit:Grabung.
+idarit:G10 rdfs:label "Bardowieck".
+idarit:G10 geo:lat "53.299167".
+idarit:G10 geo:lon "10.395".
+idarit:G10 idarit:visitedBy idarit:P4.
+idarit:G10 idarit:visitedBy idarit:P3.
+idarit:G10 idarit:visitedBy idarit:P7.
+idarit:G10 idarit:visitedBy idarit:P24.
+idarit:G11 a idarit:Grabung.
+idarit:G11 rdfs:label "Alt Lübeck".
+idarit:G11 geo:lat "53.907778".
+idarit:G11 geo:lon "10.714444".
+idarit:G11 idarit:visitedBy idarit:P3.
+idarit:G11 idarit:visitedBy idarit:P4.
+idarit:G11 idarit:visitedBy idarit:P9.
+idarit:G11 idarit:visitedBy idarit:P10.
+idarit:G11 idarit:visitedBy idarit:P24.
+idarit:G11 idarit:visitedBy idarit:P30.
+idarit:G12 a idarit:Grabung.
+idarit:G12 rdfs:label "Wolin".
+idarit:G12 geo:lat "53.915833".
+idarit:G12 geo:lon "14.568611".
+idarit:G12 idarit:visitedBy idarit:P3.
+idarit:G12 idarit:visitedBy idarit:P4.
+idarit:G12 idarit:visitedBy idarit:P10.
