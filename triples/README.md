@@ -1,1 +1,1 @@
-# Schindler Triples
+# Triples der "AnneDB"
