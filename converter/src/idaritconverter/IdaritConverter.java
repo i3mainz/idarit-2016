@@ -61,7 +61,7 @@ public class IdaritConverter {
 			for (String entry : Person) {
 				String[] split = entry.split("\t");
 				output.add("idarit:P" + split[0] + " a foaf:Person.");
-				output.add("idarit:P" + split[0] + " foaf:Name \"" + split[1] + "\".");
+				output.add("idarit:P" + split[0] + " foaf:name \"" + split[1] + "\".");
 				output.add("idarit:P" + split[0] + " vcard:hasRole \"" + split[2] + "\".");
 				if (!split[3].equals("")) {
 					output.add("idarit:P" + split[0] + " rdfs:seeAlso <http://dbpedia.org/resource/" + split[3] + ">.");
@@ -132,7 +132,7 @@ public class IdaritConverter {
 				}
 			}
 			// write output file
-			File file = new File("C:\\temp\\Daten_Anne.ttl");
+			File file = new File("C:\\temp\\annedb.ttl");
 			if (!file.exists()) {
 				file.createNewFile();
 			}
