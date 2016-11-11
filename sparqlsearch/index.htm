@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SPARQL Search for AnneDB</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+		<!--CodeMirror-->
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<script src="lib/codemirror.js"></script>
+		<script src="addon/edit/matchbrackets.js"></script>
+		<script src="cm-sparql.js"></script>
+    </head>
+    <body>
+		<h1>SPARQL Search for AnneDB as HTML table</h1>
+        <span id="sparqlfield"><textarea id='sparql_eingabe'></textarea></span>
+    	<input type="button" class="btn btn-default" value="RUN SPARQL QUERY" id="sendsparqltextarea">
+        <span id="sendlink"></span>
+        <br>
+        <span id="result"></span>
+    </body>
+</html>
+
+<script>
+    var editor;
+    var SPARQLAPI = "http://143.93.114.137/sparqlproxy/SPARQL";
+    var PREFIXES = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+		"PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
+		"PREFIX idarit: <http://github.com/i3mainz/idarit-2016#>\n" +
+		"PREFIX prov: <http://www.w3.org/ns/prov#>\n" +
+		"PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>\n" +
+		"PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>\n" +
+		"PREFIX dcterms: <http://purl.org/dc/terms/>\n" +
+		"PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+		"PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+		"PREFIX foaf: <http://xmlns.com/foaf/0.1/>\n\n";
+    var QUERY_RESET = "SELECT * WHERE {\n ?s ?p ?o. \n}";
+
+    // set sparql field and load default
+    $("#sparqlfield").html("");
+    $("#sparqlfield").html("<textarea id='sparql_eingabe'></textarea>");
+    editor = CodeMirror.fromTextArea(document.getElementById("sparql_eingabe"), {
+        mode: "application/sparql-query",
+        matchBrackets: true
+    });
+    editor.setValue(PREFIXES + QUERY_RESET);
+    editor.on('keyup', function() {
+        $('#result').html("");
+    });
+
+	$("#sendsparqltextarea").click(function() {
+    	$('#result').html('<b>Loading...</b> <img src="loading.gif" height="40">');
+        query = editor.getValue();
+        query = encodeURIComponent(query);
+        $.ajax({
+            type: 'POST',
+            url: SPARQLAPI,
+            dataType: "text",
+				data: {
+				repo: 'annedb',
+				query: query,
+				format: 'json'
+			},
+            error: function(jqXHR, textStatus, errorThrown) {
+                $('#result').html(errorThrown);
+                console.error(errorThrown);
+            },
+            success: function(output) {
+                try {
+					output = JSON.parse(output);
+				} catch (e) {}
+                var vars = output.head.vars;
+				var bindings = output.results.bindings;
+				var size = 100/vars.length;
+                var html_str = "";
+                html_str += "<span class='resultsleft'>SPARQL Results ("+bindings.length+")</span>";
+                html_str += "<table id='result'>";
+                for (var item in vars) {
+                	html_str += "<th>" + vars[item] + "</th>";
+                }
+                var bgcolor = true;
+                for (var item in bindings) {
+                    if (bgcolor) {
+                        html_str += "<tr width='"+size+"%' class='nobg'>";
+                    } else {
+                        html_str += "<tr width='"+size+"%' class='bg'>";
+                    }
+                    var size = 100/vars.length;
+                    for (var varstr in vars) {
+                    	var tblTxt = "";
+                    	if (bindings[item][vars[varstr]].type==="uri") {
+                    		var val = bindings[item][vars[varstr]].value;
+                    		val = val.replace("http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdf:");
+							val = val.replace("http://www.w3.org/2000/01/rdf-schema#","rdfs:");
+							val = val.replace("http://github.com/i3mainz/idarit-2016#","idarit:");
+							val = val.replace("http://www.w3.org/ns/prov#","prov:");
+							val = val.replace("http://www.w3.org/2006/vcard/ns#","vcard:");
+							val = val.replace("http://www.w3.org/2003/01/geo/wgs84_pos#","geo:");
+							val = val.replace("http://purl.org/dc/terms/","dcterms:");
+							val = val.replace("http://www.w3.org/2002/07/owl#","owl:");
+							val = val.replace("http://www.w3.org/2001/XMLSchema#","xsd:");
+							val = val.replace("http://xmlns.com/foaf/0.1/","foaf:");
+							if (val.indexOf("idarit:") != -1) {
+								tblTxt = val;
+							} else {
+								tblTxt = "<a href='"+bindings[item][vars[varstr]].value+"' target='_blank'>"+val+"</a>";
+							}
+                    	} else if (bindings[item][vars[varstr]]["xml:lang"]) {
+                    		tblTxt = bindings[item][vars[varstr]].value + "@" + bindings[item][vars[varstr]]["xml:lang"];
+                    	} else {
+                    		tblTxt = bindings[item][vars[varstr]].value;
+                    	}
+                    	html_str += "<td width='"+size+"%'>" + tblTxt + "</td>";
+                    }
+                    html_str += "</tr>";
+                    if (bgcolor) {
+                    	bgcolor = false;
+                    } else {
+                    	bgcolor = true;
+                    }
+                }
+                html_str += "</table>";
+                // set div/span with sparql table content
+                $('#result').html("");
+                $('#result').html(html_str);
+                setSPARQLResultsLinks();
+            }
+        });
+    });
+</script>
