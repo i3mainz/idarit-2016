@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	var store = "http://143.93.114.137/sparqlproxy/SPARQL";
-	var query = 'SELECT * WHERE { ?s ?p ?o.  }';
+	var query = 'SELECT * WHERE { ?s ?p ?o. } LIMIT 10';
 	query = encodeURIComponent(query);
 	$.ajax({
 		async: false,
 		dataType: 'json',
 		data: {
-			repo: 'idarit',
+			repo: 'annedb',
 			query: query,
 			format: 'json'
 		},
