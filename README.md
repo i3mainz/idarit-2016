@@ -1,6 +1,6 @@
-# IDARIT 2016
+# IDARIT 2016 | Programmieraufgabe
 
-Beispieldateien für die Programmieraufgabe des Moduls IDARIT im WiSe 2016/2017.
+Beispieldateien für die Programmieraufgabe des Moduls "Interdisziplinäre Anwendungen raumbezogener Informationstechnik" im Wintersemester 2016/2017.
 
 ## License
 
