@@ -1,0 +1,56 @@
+@prefix idarit: <http://github.com/i3mainz/idarit-2016#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# classes
+
+idarit:Brief a rdf:Class.
+idarit:Brief rdfs:description "Der Brief (von lateinisch brevis libellus, bzw. vulgärlateinisch breve scriptum (epistula)‚ kurzes Schreiben, zu brevis ‚kurz‘) ist eine auf Papier festgehaltene Nachricht, die meist von einem Boten überbracht wird und eine für den Empfänger gedachte persönliche Botschaft enthält.".
+
+idarit:Vortrag a rdf:Class.
+idarit:Vortrag rdfs:description "Ein Referat ist ein Vortrag über ein Thema, der in einer begrenzten Zeit (etwa 10–30 Minuten) gehalten wird. Die häufigsten Formen sind mündliche Berichte, Fachvorträge bei Tagungen, Kurzreferate bei Seminaren oder Übungsreferate in der Schule.".
+
+idarit:Grabung a rdf:Class.
+idarit:Grabung rdfs:description "Unter einer Ausgrabung beziehungsweise Grabung wird im deutschen Sprachraum die archäologische oder paläontologische Freilegung eines von Erdboden oder von Erd- oder Steinauftragung verdeckten Befundes verstanden, bei dem dieser Vorgang mit wissenschaftlicher Zuverlässigkeit dokumentiert wird.".
+
+# properties
+
+idarit:memberOf a rdf:Property.
+idarit:memberOf rdfs:description "Person X arbeitet bei Institution Y".
+idarit:memberOf rdfs:domain foaf:Person.
+idarit:memberOf rdfs:range vcard:Organization.
+
+idarit:sendTo a rdf:Property.
+idarit:sendTo rdfs:description "Brief X wurde an Person Y verschickt".
+idarit:sendTo rdfs:domain idarit:Brief.
+idarit:sendTo rdfs:range foaf:Person.
+
+idarit:writtenBy a rdf:Property.
+idarit:writtenBy rdfs:description "Brief X wurde von Person Y verfasst".
+idarit:writtenBy rdfs:domain idarit:Brief.
+idarit:writtenBy rdfs:range foaf:Person.
+
+idarit:visitedBy a rdf:Property.
+idarit:visitedBy rdfs:description "Grabung X wurde von Person Y besucht".
+idarit:visitedBy rdfs:domain idarit:Grabung.
+idarit:visitedBy rdfs:range foaf:Person.
+
+idarit:worksAt a rdf:Property.
+idarit:worksAt rdfs:description "Person X arbeitet bei Grabung Y".
+idarit:worksAt rdfs:domain foaf:Person.
+idarit:worksAt rdfs:range idarit:Grabung.
+
+idarit:presentedBy a rdf:Property.
+idarit:presentedBy rdfs:description "Vortrag X wurde von Person Y gehalten".
+idarit:presentedBy rdfs:domain idarit:Vortrag.
+idarit:presentedBy rdfs:range foaf:Person.
+
+idarit:presentedAt a rdf:Property.
+idarit:presentedAt rdfs:description "Vortrag X wurde bei Organisation Y gehalten".
+idarit:presentedAt rdfs:domain idarit:Vortrag.
+idarit:presentedAt rdfs:range vcard:Organization.
+
+idarit:isAbout a rdf:Property.
+idarit:isAbout rdfs:description "Vortrag X handelt von Grabung Y".
+idarit:isAbout rdfs:domain idarit:Vortrag.
+idarit:isAbout rdfs:range idarit:Grabung.
