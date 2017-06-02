@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>SPARQL Search for AnneDB</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+		<!--CodeMirror-->
+		<link rel="stylesheet" href="lib/codemirror.css">
+		<script src="lib/codemirror.js"></script>
+		<script src="addon/edit/matchbrackets.js"></script>
+		<script src="cm-sparql.js"></script>
+    </head>
+    <body>
+		<h1>SPARQL Search for TextTelSem Repository</h1>
+        <span id="sparqlfield"><textarea id='sparql_eingabe'></textarea></span>
+    	<input type="button" class="btn btn-default" value="RUN SPARQL QUERY" id="sendsparqltextarea">
+        <span id="sendlink"></span>
+        <br>
+        <span id="result"></span>
+    </body>
+</html>
+
+<script>
+    var editor;
+    var SPARQLAPI = "http://143.93.114.135/rdfproxy/SPARQL";
+    var PREFIXES = "PREFIX higeomes: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/>\n" +
+        "PREFIX person: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Person/>\n" +
+        "PREFIX sherding: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Sherding/>\n" +
+        "PREFIX kind: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Kind/>\n" +
+        "PREFIX bibliography: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Bibliography/>\n" +
+        "PREFIX size: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Size/>\n" +
+        "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n" +
+        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX role: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Role/>\n" +
+        "PREFIX dating: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Dating/>\n" +
+        "PREFIX findspot: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Findspot/>\n" +
+        "PREFIX presumption: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Presumption/>\n" +
+        "PREFIX country: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Country>\n" +
+        "PREFIX survey: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Survey/>\n" +
+        "PREFIX geozone: <http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Geozone>\n" +
+        "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n" +
+        "PREFIX xml: <http://www.w3.org/XML/1998/namespace>\n" +
+        "PREFIX tmp: <http://www.tmp.de/>\n\n";
+
+    var QUERY_RESET = "SELECT * WHERE {\n ?s ?p ?o. \n} LIMIT 1000";
+
+    // set sparql field and load default
+    $("#sparqlfield").html("");
+    $("#sparqlfield").html("<textarea id='sparql_eingabe'></textarea>");
+    editor = CodeMirror.fromTextArea(document.getElementById("sparql_eingabe"), {
+        mode: "application/sparql-query",
+        matchBrackets: true
+    });
+    editor.setValue(PREFIXES + QUERY_RESET);
+    editor.on('keyup', function() {
+        $('#result').html("");
+    });
+
+	$("#sendsparqltextarea").click(function() {
+    	$('#result').html('<b>Loading...</b> <img src="loading.gif" height="40">');
+        query = editor.getValue();
+        query = encodeURIComponent(query);
+        $.ajax({
+            type: 'POST',
+            url: SPARQLAPI,
+            dataType: "text",
+				data: {
+                serverURL: 'http://higeomes.i3mainz.hs-mainz.de/openrdf-sesame',
+                repo: 'textelsem',
+				query: query,
+				format: 'json'
+			},
+            error: function(jqXHR, textStatus, errorThrown) {
+                $('#result').html(errorThrown);
+                console.error(errorThrown);
+            },
+            success: function(output) {
+                try {
+					output = JSON.parse(output);
+				} catch (e) {}
+                var vars = output.head.vars;
+				var bindings = output.results.bindings;
+				var size = 100/vars.length;
+                var html_str = "";
+                html_str += "<span class='resultsleft'>SPARQL Results ("+bindings.length+")</span>";
+                html_str += "<table id='result'>";
+                for (var item in vars) {
+                	html_str += "<th>" + vars[item] + "</th>";
+                }
+                var bgcolor = true;
+                for (var item in bindings) {
+                    if (bgcolor) {
+                        html_str += "<tr width='"+size+"%' class='nobg'>";
+                    } else {
+                        html_str += "<tr width='"+size+"%' class='bg'>";
+                    }
+                    var size = 100/vars.length;
+                    for (var varstr in vars) {
+                    	var tblTxt = "";
+                    	if (bindings[item][vars[varstr]].type==="uri") {
+                    		var val = bindings[item][vars[varstr]].value;
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/","higeomes:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Person/","person:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Sherding/","sherding:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Kind/","kind:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Bibliography/","bibliography:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Size/","size:");
+                            val = val.replace("http://www.w3.org/2000/01/rdf-schema#","rdfs:");
+                            val = val.replace("http://www.w3.org/2001/XMLSchema#","xsd:");
+                            val = val.replace("http://www.w3.org/1999/02/22-rdf-syntax-ns#","rdf:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Role/","role:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Dating/","dating:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Findspot/","findspot:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Presumption/","presumption:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Country","country:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Survey/","survey:");
+                            val = val.replace("http://higeomes.i3mainz.hs-mainz.de/textelsem/ArchDB/Geozone","geozone:");
+                            val = val.replace("http://www.w3.org/2002/07/owl#","owl:");
+                            val = val.replace("http://www.w3.org/XML/1998/namespace","xml:");
+                            val = val.replace("http://www.tmp.de/","tmp:");
+							if (val.indexOf("idarit:") != -1) {
+								tblTxt = val;
+							} else {
+								tblTxt = "<a href='"+bindings[item][vars[varstr]].value+"' target='_blank'>"+val+"</a>";
+							}
+                    	} else if (bindings[item][vars[varstr]]["xml:lang"]) {
+                    		tblTxt = bindings[item][vars[varstr]].value + "@" + bindings[item][vars[varstr]]["xml:lang"];
+                    	} else {
+                    		tblTxt = bindings[item][vars[varstr]].value;
+                    	}
+                    	html_str += "<td width='"+size+"%'>" + tblTxt + "</td>";
+                    }
+                    html_str += "</tr>";
+                    if (bgcolor) {
+                    	bgcolor = false;
+                    } else {
+                    	bgcolor = true;
+                    }
+                }
+                html_str += "</table>";
+                // set div/span with sparql table content
+                $('#result').html("");
+                $('#result').html(html_str);
+            }
+        });
+    });
+</script>
