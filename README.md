@@ -4,6 +4,12 @@ Beispieldateien für die Programmieraufgabe des Moduls "Interdisziplinäre Anwen
 
 [Examples](https://i3mainz.github.io/idarit-2016/examples/idarit_js_ex.htm)
 
+[SPARQL Search](https://i3mainz.github.io/idarit-2016/sparqlsearch/index.htm)
+
+[SPARQL Search Textelsem](https://i3mainz.github.io/idarit-2016/sparqlsearch_textelsem/index.htm)
+
+
+
 ## License
 
 MIT License
