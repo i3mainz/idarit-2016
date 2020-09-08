@@ -2,6 +2,8 @@
 
 Beispieldateien für die Programmieraufgabe des Moduls "Interdisziplinäre Anwendungen raumbezogener Informationstechnik" im Wintersemester 2016/2017.
 
+[Examples](https://i3mainz.github.io/idarit-2016/examples/idarit_js_ex.htm)
+
 ## License
 
 MIT License
